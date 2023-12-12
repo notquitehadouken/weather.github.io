@@ -54,6 +54,41 @@
 		<div>
 			<img id="outlookthunder" src="https://www.spc.noaa.gov/products/exper/enhtstm/imgs/enh_0000.gif">
 		</div>
+		SREF <select id="srefList" size="1">
+			<option value="f000">F000</option>
+			<option value="f003">F003</option>
+			<option value="f006">F006</option>
+			<option value="f009">F009</option>
+			<option value="f012">F012</option>
+			<option value="f015">F015</option>
+			<option value="f018">F018</option>
+			<option value="f021">F021</option>
+			<option value="f024">F024</option>
+			<option value="f027">F027</option>
+			<option value="f030">F030</option>
+			<option value="f033">F033</option>
+			<option value="f036">F036</option>
+			<option value="f039">F039</option>
+			<option value="f042">F042</option>
+			<option value="f045">F045</option>
+			<option value="f048">F048</option>
+			<option value="f051">F051</option>
+			<option value="f054">F054</option>
+			<option value="f057">F057</option>
+			<option value="f060">F060</option>
+			<option value="f063">F063</option>
+			<option value="f066">F066</option>
+			<option value="f069">F069</option>
+			<option value="f072">F072</option>
+			<option value="f075">F075</option>
+			<option value="f078">F078</option>
+			<option value="f081">F081</option>
+			<option value="f084">F084</option>
+			<option value="f087">F087</option>
+		</select>
+		<div>
+			<img id="srefImg" src="https://www.spc.noaa.gov/exper/sref/gifs/latest/SREF_H5__f000.gif">
+		</div>
 		
 		<script>
 			var last = ""
@@ -64,8 +99,10 @@
 				var imgwind = document.getElementById("outlookwind");
 				var imghail = document.getElementById("outlookhail");
 				var imgthunder = document.getElementById("outlookthunder");
+				var imgsref = document.getElementById("outlookthunder");
 				var optionsRegular = document.getElementById("outlookRegular");
 				var optionsThunder = document.getElementById("outlookThunder");
+				var optionsSREF = document.getElementById("srefList");
 				if (last != optionsRegular.value){
 					last = optionsRegular.value;
 					switch(optionsRegular.value){
@@ -120,6 +157,7 @@
 					}
 				}
 				imgthunder.src = "https://www.spc.noaa.gov/products/exper/enhtstm/imgs/enh_"+optionsThunder.value+".gif";
+				imgsref.src = "https://www.spc.noaa.gov/exper/sref/gifs/latest/SREF_H5__"+srefList.value+".gif";
 			},10);
 		</script>
 	</body>
