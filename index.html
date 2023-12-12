@@ -1,0 +1,62 @@
+<head>
+<style>
+body, * {margin:0px;padding:0px;font-family:Courier;}
+div {padding:0px;margin:0px;border: 1px solid red;}
+</style>
+</head>
+<body>
+<table cellspacing="0" cellpadding="0" width="100%" border="0">
+  <tr>
+    <td rowspan="2"><img src="https://www.spc.noaa.gov/nwscwi/noaaleft.jpg" alt="NOAA logo-Select to go to the NOAA homepage" width="85" height="78" border="0" /></a></td>
+    <td><img src="https://www.spc.noaa.gov/nwscwi/noaa_nws_title.jpg" width="500" height="20" border="0" alt="NOAA's National Weather Service"></td>
+    <td rowspan="2" width="100%" background="https://www.spc.noaa.gov/nwscwi/ncep_bkgrnd.jpg">This website compiled by notquitehadouken<br/>ALL images from <a href="https://spc.noaa.gov">spc.noaa.gov</a></td>
+    <td rowspan="2" align="right"><img src="https://www.spc.noaa.gov/nwscwi/nwsright.jpg" alt="Select to go to the NWS homepage" width="85" height="78" border="0" /></a></td>
+  </tr>
+  <tr>
+    <td><img height="58" alt="Storm Prediction Center" src="https://www.spc.noaa.gov/nwscwi/spc.jpg" width="500" border="0"></td>
+  </tr>
+</table>
+IR map and outlook day 1, overlaid.
+<div style="width:1024px;height:768px;">
+<img style="position:absolute;" src="https://www.spc.noaa.gov/exper/compmap/16.gif">
+<img style="position:absolute;" src="https://www.spc.noaa.gov/exper/compmap/18.gif">
+</div>
+Outlook for <select id="outlookID" size="1">
+    <option value="https://www.spc.noaa.gov/products/outlook/day1otlk_0100.gif">Day 1 iss. 0100Z (1900 CST)</option>
+    <option value="https://www.spc.noaa.gov/products/outlook/day1otlk_1200.gif">Day 1 iss. 1200Z (0600 CST)</option>
+    <option value="https://www.spc.noaa.gov/products/outlook/day1otlk_1300.gif">Day 1 iss. 1300Z (0700 CST)</option>
+    <option value="https://www.spc.noaa.gov/products/outlook/day1otlk_1630.gif">Day 1 iss. 1630Z (1030 CST)</option>
+    <option value="https://www.spc.noaa.gov/products/outlook/day1otlk_2000.gif">Day 1 iss. 2000Z (1400 CST)</option>
+    <option value="https://www.spc.noaa.gov/products/outlook/day2otlk_0600.gif">Day 2 iss. 0600Z (0000 CST)</option>
+    <option value="https://www.spc.noaa.gov/products/outlook/day2otlk_0700.gif">Day 2 iss. 0700Z (0100 CST)</option>
+    <option value="https://www.spc.noaa.gov/products/outlook/day2otlk_1730.gif">Day 2 iss. 1730Z (1130 CST)</option>
+    <option value="https://www.spc.noaa.gov/products/outlook/day3otlk_0730.gif">Day 3 iss. 0730Z (0130 CST)</option>
+    <option value="https://www.spc.noaa.gov/products/outlook/day3otlk_0830.gif">Day 3 iss. 0830Z (0230 CST)</option>
+    <option value="https://www.spc.noaa.gov/products/exper/day4-8/day4prob.gif">Day 4</option>
+    <option value="https://www.spc.noaa.gov/products/exper/day4-8/day5prob.gif">Day 5</option>
+    <option value="https://www.spc.noaa.gov/products/exper/day4-8/day6prob.gif">Day 6</option>
+    <option value="https://www.spc.noaa.gov/products/exper/day4-8/day7prob.gif">Day 7</option>
+    <option value="https://www.spc.noaa.gov/products/exper/day4-8/day8prob.gif">Day 8</option>
+    <option value="https://www.spc.noaa.gov/products/exper/day4-8/day48prob.gif">Days 4-8</option>
+    <option value="https://www.spc.noaa.gov/products/exper/enhtstm/imgs/enh_0000.gif">Thunderstorm, 0000Z to 0400Z</option>
+    <option value="https://www.spc.noaa.gov/products/exper/enhtstm/imgs/enh_0400.gif">Thunderstorm, 0400Z to 1200Z</option>
+    <option value="https://www.spc.noaa.gov/products/exper/enhtstm/imgs/enh_1200.gif">Thunderstorm, 1200Z to 1600Z</option>
+    <option value="https://www.spc.noaa.gov/products/exper/enhtstm/imgs/enh_1600.gif">Thunderstorm, 1600Z to 2000Z</option>
+    <option value="https://www.spc.noaa.gov/products/exper/enhtstm/imgs/enh_2000.gif">Thunderstorm, 2000Z to 0000Z</option>
+</select><br/>
+Note that outlooks issued in the future will be the outlooks from yesterday.
+<div style="width:815px;height:555px;">
+<img id="outlook" style="position:absolute;" src="https://www.spc.noaa.gov/products/outlook/day1otlk_1300.gif">
+</div>
+
+<script>
+setInterval(function(){
+var img = document.getElementById("outlook");
+var options = document.getElementById("outlookID");
+if (img.src == options.value)
+ return;
+img.src = options.value;
+},10);
+</script>
+
+</body>
