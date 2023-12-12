@@ -22,60 +22,109 @@
 			<img style="position:absolute;" src="https://www.spc.noaa.gov/exper/compmap/16.gif">
 			<img style="position:absolute;" src="https://www.spc.noaa.gov/exper/compmap/18.gif">
 		</div>
-		Outlook for <select id="outlookID" size="1">
-			<option value="https://www.spc.noaa.gov/products/outlook/day1otlk_0100.gif">Day 1 issue 0100Z (1900 CST)</option>
-			<option value="https://www.spc.noaa.gov/products/outlook/day1probotlk_0100_torn.gif">Day 1 0100Z, probabalistic tornado</option>
-			<option value="https://www.spc.noaa.gov/products/outlook/day1probotlk_0100_wind.gif">Day 1 0100Z, probabalistic wind</option>
-			<option value="https://www.spc.noaa.gov/products/outlook/day1probotlk_0100_hail.gif">Day 1 0100Z, probabalistic hail</option>
-			<option value="https://www.spc.noaa.gov/products/outlook/day1otlk_1200.gif">Day 1 issue 1200Z (0600 CST)</option>
-			<option value="https://www.spc.noaa.gov/products/outlook/day1probotlk_1200_torn.gif">Day 1 1200Z, probabalistic tornado</option>
-			<option value="https://www.spc.noaa.gov/products/outlook/day1probotlk_1200_wind.gif">Day 1 1200Z, probabalistic wind</option>
-			<option value="https://www.spc.noaa.gov/products/outlook/day1probotlk_1200_hail.gif">Day 1 1200Z, probabalistic hail</option>
-			<option value="https://www.spc.noaa.gov/products/outlook/day1otlk_1300.gif">Day 1 issue 1300Z (0700 CST)</option>
-			<option value="https://www.spc.noaa.gov/products/outlook/day1probotlk_1300_torn.gif">Day 1 1300Z, probabalistic tornado</option>
-			<option value="https://www.spc.noaa.gov/products/outlook/day1probotlk_1300_wind.gif">Day 1 1300Z, probabalistic wind</option>
-			<option value="https://www.spc.noaa.gov/products/outlook/day1probotlk_1300_hail.gif">Day 1 1300Z, probabalistic hail</option>
-			<option value="https://www.spc.noaa.gov/products/outlook/day1otlk_1630.gif">Day 1 issue 1630Z (1030 CST)</option>
-			<option value="https://www.spc.noaa.gov/products/outlook/day1probotlk_1630_torn.gif">Day 1 1630Z, probabalistic tornado</option>
-			<option value="https://www.spc.noaa.gov/products/outlook/day1probotlk_1630_wind.gif">Day 1 1630Z, probabalistic wind</option>
-			<option value="https://www.spc.noaa.gov/products/outlook/day1probotlk_1630_hail.gif">Day 1 1630Z, probabalistic hail</option>
-			<option value="https://www.spc.noaa.gov/products/outlook/day1otlk_2000.gif">Day 1 issue 2000Z (1400 CST)</option>
-			<option value="https://www.spc.noaa.gov/products/outlook/day1probotlk_2000_torn.gif">Day 1 2000Z, probabalistic tornado</option>
-			<option value="https://www.spc.noaa.gov/products/outlook/day1probotlk_2000_wind.gif">Day 1 2000Z, probabalistic wind</option>
-			<option value="https://www.spc.noaa.gov/products/outlook/day1probotlk_2000_hail.gif">Day 1 2000Z, probabalistic hail</option>
-			<option value="https://www.spc.noaa.gov/products/outlook/day2otlk_0700.gif">Day 2 issue 0700Z (0100 CST)</option>
-			<option value="https://www.spc.noaa.gov/products/outlook/day2probotlk_0700_torn.gif">Day 2 0700Z, probabalistic tornado</option>
-			<option value="https://www.spc.noaa.gov/products/outlook/day2probotlk_0700_wind.gif">Day 2 0700Z, probabalistic wind</option>
-			<option value="https://www.spc.noaa.gov/products/outlook/day2probotlk_0700_hail.gif">Day 2 0700Z, probabalistic hail</option>
-			<option value="https://www.spc.noaa.gov/products/outlook/day2otlk_1730.gif">Day 2 issue 1730Z (1130 CST)</option>
-			<option value="https://www.spc.noaa.gov/products/outlook/day2probotlk_1730_torn.gif">Day 2 1730Z, probabalistic tornado</option>
-			<option value="https://www.spc.noaa.gov/products/outlook/day2probotlk_1730_wind.gif">Day 2 1730Z, probabalistic wind</option>
-			<option value="https://www.spc.noaa.gov/products/outlook/day2probotlk_1730_hail.gif">Day 2 1730Z, probabalistic hail</option>
-			<option value="https://www.spc.noaa.gov/products/outlook/day3otlk_0830.gif">Day 3 issue 0830Z (0230 CST)</option>
-			<option value="https://www.spc.noaa.gov/products/outlook/day3prob_0830.gif">Day 3 0830Z, probabalistic</option>
-			<option value="https://www.spc.noaa.gov/products/exper/day4-8/day4prob.gif">Day 4</option>
-			<option value="https://www.spc.noaa.gov/products/exper/day4-8/day5prob.gif">Day 5</option>
-			<option value="https://www.spc.noaa.gov/products/exper/day4-8/day6prob.gif">Day 6</option>
-			<option value="https://www.spc.noaa.gov/products/exper/day4-8/day7prob.gif">Day 7</option>
-			<option value="https://www.spc.noaa.gov/products/exper/day4-8/day8prob.gif">Day 8</option>
-			<option value="https://www.spc.noaa.gov/products/exper/day4-8/day48prob.gif">Days 4-8</option>
+		Outlook for <select id="outlookRegular" size="1">
+			<option value="1-0100">Day 1 issue 0100Z (1900 CST)</option>
+			<option value="1-1200">Day 1 issue 1200Z (0600 CST)</option>
+			<option value="1-1300">Day 1 issue 1300Z (0700 CST)</option>
+			<option value="1-1630">Day 1 issue 1630Z (1030 CST)</option>
+			<option value="1-2000">Day 1 issue 2000Z (1400 CST)</option>
+			<option value="2-0700">Day 2 issue 0700Z (0100 CST)</option>
+			<option value="2-1730">Day 2 issue 1730Z (1130 CST)</option>
+			<option value="3-0830">Day 3 issue 0830Z (0230 CST)</option>
+			<option value="4">Day 4</option>
+			<option value="5">Day 5</option>
+			<option value="6">Day 6</option>
+			<option value="7">Day 7</option>
+			<option value="8">Day 8</option>
+			<option value="4-8">Days 4-8</option>
 			<option value="https://www.spc.noaa.gov/products/exper/enhtstm/imgs/enh_0000.gif">Thunderstorm, 0000Z to 0400Z</option>
 			<option value="https://www.spc.noaa.gov/products/exper/enhtstm/imgs/enh_0400.gif">Thunderstorm, 0400Z to 1200Z</option>
 			<option value="https://www.spc.noaa.gov/products/exper/enhtstm/imgs/enh_1200.gif">Thunderstorm, 1200Z to 1600Z</option>
 			<option value="https://www.spc.noaa.gov/products/exper/enhtstm/imgs/enh_1600.gif">Thunderstorm, 1600Z to 2000Z</option>
 			<option value="https://www.spc.noaa.gov/products/exper/enhtstm/imgs/enh_2000.gif">Thunderstorm, 2000Z to 0000Z</option>
-		</select><br/>
-		<div style="width:815px;height:555px;">
-			<img id="outlook" style="position:absolute;" src="https://www.spc.noaa.gov/products/outlook/day1otlk_1300.gif">
+		</select>
+		<div>
+			<img id="outlookcat" src="https://www.spc.noaa.gov/products/outlook/day1otlk_1300.gif">
+			<img id="outlooktorn" src="https://www.spc.noaa.gov/products/outlook/day1probotlk_1300_torn.gif">
+			<img id="outlookwind" src="https://www.spc.noaa.gov/products/outlook/day1probotlk_1300_wind.gif">
+			<img id="outlookhail" src="https://www.spc.noaa.gov/products/outlook/day1probotlk_1300_hail.gif">
+		</div>
+		Tornado outlook for <select id="outlookThunder" size="1">
+			<option value="0000">0000Z to 0400Z</option>
+			<option value="0400">0400Z to 1200Z</option>
+			<option value="1200">1200Z to 1600Z</option>
+			<option value="1600">1600Z to 2000Z</option>
+			<option value="2000">2000Z to 0000Z</option>
+		</select>
+		<div>
+			<img id="outlookthunder" src="https://www.spc.noaa.gov/products/exper/enhtstm/imgs/enh_0000.gif">
 		</div>
 		
 		<script>
+			var last = ""
+			var pref = "https://www.spc.noaa.gov/products/"
 			setInterval(function(){
-				var img = document.getElementById("outlook");
-				var options = document.getElementById("outlookID");
-				if (img.src == options.value)
-					return;
-				img.src = options.value;
+				var imgcat = document.getElementById("outlookcat");
+				var imgtorn = document.getElementById("outlooktorn");
+				var imgwind = document.getElementById("outlookwind");
+				var imghail = document.getElementById("outlookhail");
+				var imgthunder = document.getElementById("outlookthunder");
+				var optionsRegular = document.getElementById("outlookRegular");
+				var optionsThunder = document.getElementById("outlookThunder");
+				if (last != optionsRegular.value){
+					last = optionsRegular.value;
+					switch(optionsRegular.value){
+						case "1-0100":
+							imgcat.src = pref + "outlook/day1otlk_0100.gif";
+							imgtorn.src = pref + "outlook/day1probotlk_0100_torn.gif";
+							imgwind.src = pref + "outlook/day1probotlk_0100_wind.gif";
+							imghail.src = pref + "outlook/day1probotlk_0100_hail.gif";
+							break;
+						case "1-1200":
+							imgcat.src = pref + "outlook/day1otlk_1200.gif";
+							imgtorn.src = pref + "outlook/day1probotlk_1200_torn.gif";
+							imgwind.src = pref + "outlook/day1probotlk_1200_wind.gif";
+							imghail.src = pref + "outlook/day1probotlk_1200_hail.gif";
+							break;
+						case "1-1300":
+							imgcat.src = pref + "outlook/day1otlk_1300.gif";
+							imgtorn.src = pref + "outlook/day1probotlk_1300_torn.gif";
+							imgwind.src = pref + "outlook/day1probotlk_1300_wind.gif";
+							imghail.src = pref + "outlook/day1probotlk_1300_hail.gif";
+							break;
+						case "1-1630":
+							imgcat.src = pref + "outlook/day1otlk_1630.gif";
+							imgtorn.src = pref + "outlook/day1probotlk_1630_torn.gif";
+							imgwind.src = pref + "outlook/day1probotlk_1630_wind.gif";
+							imghail.src = pref + "outlook/day1probotlk_1630_hail.gif";
+							break;
+						case "1-2000":
+							imgcat.src = pref + "outlook/day1otlk_2000.gif";
+							imgtorn.src = pref + "outlook/day1probotlk_2000_torn.gif";
+							imgwind.src = pref + "outlook/day1probotlk_2000_wind.gif";
+							imghail.src = pref + "outlook/day1probotlk_2000_hail.gif";
+							break;
+						case "2-0700":
+							imgcat.src = pref + "outlook/day2otlk_0700.gif";
+							imgtorn.src = pref + "outlook/day2probotlk_0700_torn.gif";
+							imgwind.src = pref + "outlook/day2probotlk_0700_wind.gif";
+							imghail.src = pref + "outlook/day2probotlk_0700_hail.gif";
+							break;
+						case "2-1730":
+							imgcat.src = pref + "outlook/day2otlk_1730.gif";
+							imgtorn.src = pref + "outlook/day2probotlk_1730_torn.gif";
+							imgwind.src = pref + "outlook/day2probotlk_1730_wind.gif";
+							imghail.src = pref + "outlook/day2probotlk_1730_hail.gif";
+							break;
+						case "3-0830":
+							imgcat.src = pref + "outlook/day3otlk_0830.gif";
+							imgtorn.src = pref + "outlook/day3prob_0830.gif";
+							imgwind.src = pref + "";
+							imghail.src = pref + "";
+							break;
+					}
+				}
+				imgthunder.src = "https://www.spc.noaa.gov/products/exper/enhtstm/imgs/enh_"+optionsThunder.value+".gif";
 			},10);
 		</script>
 	</body>
