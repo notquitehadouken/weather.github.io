@@ -1,8 +1,9 @@
 <html>
 	<head>
 		<style>
-			body, * {margin:0px;padding:0px;font-family:Courier;background-color:#000;color:#FFF}
-			div {padding:0px;margin:0px;border: 1px solid red;background-color:#FFF}
+			body, * {margin:0px;padding:0px;font-family:Courier;}
+			div {padding:0px;margin:0px;border: 1px solid red;}
+			div.black {background-color:#000;color:#FFF;}
 		</style>
 	</head>
 	<body>
@@ -22,6 +23,7 @@
 			<img style="position:absolute;" src="https://www.spc.noaa.gov/exper/compmap/16.gif">
 			<img style="position:absolute;" src="https://www.spc.noaa.gov/exper/compmap/18.gif">
 		</div>
+		<div class="black">
 		Outlook for <select id="outlookRegular" size="1">
 			<option value="1-0100">Day 1 issue 0100Z (1900 CST)</option>
 			<option value="1-1200">Day 1 issue 1200Z (0600 CST)</option>
@@ -38,12 +40,14 @@
 			<option value="8">Day 8</option>
 			<option value="4-8">Days 4-8</option>
 		</select>
+		</div>
 		<div>
 			<img id="outlookcat" src="https://www.spc.noaa.gov/products/outlook/day1otlk_1300.gif">
 			<img id="outlooktorn" src="https://www.spc.noaa.gov/products/outlook/day1probotlk_1300_torn.gif">
 			<img id="outlookwind" src="https://www.spc.noaa.gov/products/outlook/day1probotlk_1300_wind.gif">
 			<img id="outlookhail" src="https://www.spc.noaa.gov/products/outlook/day1probotlk_1300_hail.gif">
 		</div>
+		<div class="black">
 		Tornado outlook for <select id="outlookThunder" size="1">
 			<option value="0000">0000Z to 0400Z</option>
 			<option value="0400">0400Z to 1200Z</option>
@@ -51,9 +55,11 @@
 			<option value="1600">1600Z to 2000Z</option>
 			<option value="2000">2000Z to 0000Z</option>
 		</select>
+		</div>
 		<div>
 			<img id="outlookthunder" src="https://www.spc.noaa.gov/products/exper/enhtstm/imgs/enh_0000.gif">
 		</div>
+		<div class="black">
 		SREF <select id="srefList" size="1">
 			<option value="f000">F000</option>
 			<option value="f003">F003</option>
@@ -86,6 +92,7 @@
 			<option value="f084">F084</option>
 			<option value="f087">F087</option>
 		</select>
+		</div>
 		<div>
 			<img id="srefImg" src="https://www.spc.noaa.gov/exper/sref/gifs/latest/SREF_H5__f000.gif">
 		</div>
