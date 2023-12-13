@@ -98,7 +98,7 @@
 		<div>
 			<img id="srefImg" src="https://www.spc.noaa.gov/exper/sref/gifs/latest/SREF_H5__f000.gif">
 		</div>
-		<label>WPC Final forecasts</label>
+		<label>WPC Final forecasts for snow</label>
 		<table>
 			<tr>
 				<td><input type="radio" name="WpcForeIn" value="04" checked="true"><label>4 in</label></td>
@@ -116,7 +116,13 @@
 		<div>
 			<img id="WpcForeImg" src="https://www.wpc.ncep.noaa.gov/wwd/day1_psnow_gt_04_conus.gif">
 		</div>
-		
+		<label>National Forecast</label>
+		<input type="radio" name="NatForeDay" value="1" checked="true"><label>Day 1</label>
+		<input type="radio" name="NatForeDay" value="2"><label>Day 2</label>
+		<input type="radio" name="NatForeDay" value="3"><label>Day 3</label>
+		<div>
+			<img id="NatForeImg" src="https://origin.wpc.ncep.noaa.gov/NationalForecastChart/staticmaps/noaad1.png"
+		</div>
 		<script>
 			var last = ""
 			var pref = "https://www.spc.noaa.gov/products/"
@@ -127,6 +133,7 @@
 			var imgthunder = document.getElementById("thunderImg");
 			var imgsref = document.getElementById("srefImg");
 			var imgsnow = document.getElementById("WpcForeImg");
+			var imgnatfore = document.getElementById("NatForeImg");
 			var optionsRegular = document.getElementById("outlookRegular");
 			var optionsThunder = document.getElementById("outlookThunder");
 			var optionsSREF = document.getElementById("srefList");
@@ -223,18 +230,19 @@
 				imgthunder.src = "https://www.spc.noaa.gov/products/exper/enhtstm/imgs/enh_"+optionsThunder.value+".gif";
 				imgsref.src = "https://www.spc.noaa.gov/exper/sref/gifs/latest/SREF_H5__"+optionsSREF.value+".gif";
 				let foredayelems = document.getElementsByName("WpcForeDay");
-				for (var i=0; i < foredayelems.length; i++){
-					if (foredayelems[i].checked){
+				for (var i=0; i < foredayelems.length; i++)
+					if (foredayelems[i].checked)
 						var snowDay = foredayelems[i].value;
-					}
-				}
 				let foreinelems = document.getElementsByName("WpcForeIn");
-				for (var i=0; i < foreinelems.length; i++){
-					if (foreinelems[i].checked){
+				for (var i=0; i < foreinelems.length; i++)
+					if (foreinelems[i].checked)
 						var snowIn = foreinelems[i].value;
-					}
-				}
 				imgsnow.src = "https://www.wpc.ncep.noaa.gov/wwd/" + snowDay + "_psnow_gt_" + snowIn + "_conus.gif";
+				let natforedayelems = document.getElementsByName("NatForeDay");
+				for (var i=0; i < natforedayelems.length; i++)
+					if (natforedayelems[i].checked)
+						var natForeDay = natforedayelems[i].value;
+				imgnatfore.src = "https://origin.wpc.ncep.noaa.gov/NationalForecastChart/staticmaps/noaad"+natForeDay+".png";
 			},10);
 		</script>
 	</body>
