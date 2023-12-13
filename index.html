@@ -98,24 +98,31 @@
 		<div>
 			<img id="srefImg" src="https://www.spc.noaa.gov/exper/sref/gifs/latest/SREF_H5__f000.gif">
 		</div>
-		<label>WPC Final forecasts for snow</label>
+		<label>WPC Final forecasts for snow and ice</label>
 		<table>
 			<tr>
-				<td><input type="radio" name="WpcForeIn" value="04" checked="true"><label>4 in</label></td>
+				<td><input type="radio" name="WpcForeIn" value="psnow_gt_04" checked="true"><label>4"  snow</label></td>
 				<td><input type="radio" name="WpcForeDay" value="day1" checked="true"><label>Day 1</label></td>
 			</tr>
 			<tr>
-				<td><input type="radio" name="WpcForeIn" value="08"><label>8 in</label></td>
+				<td><input type="radio" name="WpcForeIn" value="psnow_gt_08"><label>8" snow</label></td>
 				<td><input type="radio" name="WpcForeDay" value="day2"><label>Day 2</label></td>
 			</tr>
 			<tr>
-				<td><input type="radio" name="WpcForeIn" value="12"><label>12 in</label></td>
+				<td><input type="radio" name="WpcForeIn" value="psnow_gt_12"><label>12" snow</label></td>
 				<td><input type="radio" name="WpcForeDay" value="day3"><label>Day 3</label></td>
+			</tr>
+			<tr>
+				<td><input type="radio" name="WpcForeIn" value="pice_gt_25"><label>0.25" ice</label></td>
+			</tr>
+			<tr>
+				<td><input type="radio" name="WpcForeIn" value="composite"><label>Composite</label></td>
 			</tr>
 		</table>
 		<div>
 			<img id="WpcForeImg" src="https://www.wpc.ncep.noaa.gov/wwd/day1_psnow_gt_04_conus.gif">
 		</div>
+		<label>WPC Final forecasts for ice</label>
 		<label>National Forecast</label>
 		<input type="radio" name="NatForeDay" value="1" checked="true"><label>Day 1</label>
 		<input type="radio" name="NatForeDay" value="2"><label>Day 2</label>
@@ -237,7 +244,7 @@
 				for (var i=0; i < foreinelems.length; i++)
 					if (foreinelems[i].checked)
 						var snowIn = foreinelems[i].value;
-				imgsnow.src = "https://www.wpc.ncep.noaa.gov/wwd/" + snowDay + "_psnow_gt_" + snowIn + "_conus.gif";
+				imgsnow.src = "https://www.wpc.ncep.noaa.gov/wwd/" + snowDay + "_" + snowIn + "_conus.gif";
 				let natforedayelems = document.getElementsByName("NatForeDay");
 				for (var i=0; i < natforedayelems.length; i++)
 					if (natforedayelems[i].checked)
